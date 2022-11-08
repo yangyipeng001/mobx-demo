@@ -2,7 +2,8 @@ import {
     observable, 
     makeAutoObservable,
     makeObservable,
-    action
+    action,
+    computed
 } from 'mobx'
 import {observer} from 'mobx-react-lite'
 
@@ -13,6 +14,7 @@ export {
     observable,
     makeObservable,
     action,
+    computed,
 
     // mobx-react-lite
     observer,

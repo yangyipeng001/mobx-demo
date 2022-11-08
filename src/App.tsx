@@ -1,5 +1,6 @@
 
 // mobx lession1
+// mobx lession2 实现todoList
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,7 +10,17 @@ import {
 } from "react-router-dom";
 import CountPage from "./pages/CountPage";
 import './App.css'
-// import TodoListPage from "./pages/TodoListPage";
+import TodoListPage from "./pages/TodoListPage";
+
+function Layout() {
+  return (
+    <div className="border">
+      <Link to="/count">count</Link>
+      <Link to="/todoList">todoList</Link>
+      <Outlet />
+    </div>
+  );
+}
 
 function App() {
   return (
@@ -18,20 +29,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="count" element={<CountPage />} />
-            {/* <Route path="todoList" element={<TodoListPage />} /> */}
+            <Route path="todoList" element={<TodoListPage />} />
           </Route>
         </Routes>
       </Router>
-    </div>
-  );
-}
-
-function Layout() {
-  return (
-    <div className="border">
-      <Link to="/count">count</Link>
-      <Link to="/todoList">todoList</Link>
-      <Outlet />
     </div>
   );
 }
