@@ -4,11 +4,13 @@ import {
     makeObservable,
     action,
     computed,
-    Reaction
+    Reaction,
+    AnnotationsMap,
 } from 'mobx'
-// import {observer, Observer} from 'mobx-react-lite'
-import {observer, Observer} from './my-mobx-react-lite'
+// import {observer, Observer, useLocalObservable} from 'mobx-react-lite'
+import {observer, Observer, useLocalObservable} from './my-mobx-react-lite'
 
+export type {AnnotationsMap}
 
 export {
     // mobx
@@ -22,4 +24,5 @@ export {
     // mobx-react-lite
     observer,
     Observer,
+    useLocalObservable,
 }
