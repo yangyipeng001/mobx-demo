@@ -1,4 +1,4 @@
-import {useState, useRef} from 'react'
+import {useState, useRef, useEffect} from 'react'
 import { Reaction } from "../which"
 
 
@@ -31,6 +31,14 @@ export function useObserver<T>(
             )
         }
     }
+
+    // 卸载
+    useEffect(() => {
+        return () => {
+            reactionTrackingRef.current?.reaction.dispose()
+            reactionTrackingRef.current = null
+        }
+    }, [])
 
     const {reaction} = reactionTrackingRef.current
 
