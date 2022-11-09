@@ -6,8 +6,8 @@ import {
     computed,
     Reaction
 } from 'mobx'
-// import {observer} from 'mobx-react-lite'
-import {observer} from './my-mobx-react-lite'
+// import {observer, Observer} from 'mobx-react-lite'
+import {observer, Observer} from './my-mobx-react-lite'
 
 
 export {
@@ -21,4 +21,5 @@ export {
 
     // mobx-react-lite
     observer,
+    Observer,
 }
